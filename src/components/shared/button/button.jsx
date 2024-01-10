@@ -40,9 +40,4 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-Button.defaultProps = {
-  className: null,
-  to: null,
-};
-
 export default Button;

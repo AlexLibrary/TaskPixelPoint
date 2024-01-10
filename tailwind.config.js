@@ -1,5 +1,3 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   corePlugins: {
@@ -7,11 +5,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      // FIXME: Add the real project font families, which are imported in the "fonts.css" file,
-      // and give them the human-readable names
-      sans: ['', ...defaultTheme.fontFamily.sans],
-      // FIXME: Remove the "mono" font family, if it is not used in the project
-      mono: ['', ...defaultTheme.fontFamily.mono],
+      roboto: ['Roboto', 'sans-serif'],
+      poppins: ['Poppins', 'sans-serif'],
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -20,16 +15,20 @@ module.exports = {
       // FIXME: Add colors which are used in the project. Make sure that they are prepared
       // in the Figma and followed the naming "primary/secondary/gray-${number}"
       // Example of correctly prepared colors in Figma — https://user-images.githubusercontent.com/20713191/143586876-5e834233-9639-4166-9811-b00e63820d98.png
-      black: '',
-      white: '',
+      black: '#0E0A0F',
+      white: '#FFFFFF',
+      primary2Alpha: 'rgba(203, 106, 251, 0.20)',
       primary: {
-        1: '',
+        1: '#9966FF',
+        2: '#CB6AFB',
+        3: '#F7E16E',
       },
       secondary: {
-        1: '',
+        1: '#4D66E5',
       },
       gray: {
-        1: '',
+        94: '#F0EEF1',
+        98: '#FAF9FA',
       },
     }),
     // FIXME: Check if the breakpoints ("screens") are correct for the project
@@ -40,6 +39,11 @@ module.exports = {
       sm: { max: '767px' },
       xs: { max: '639px' },
       '2xs': { max: '413px' },
+    },
+    extend: {
+      dropShadow: {
+        primary5xl: '0 0 50px rgba(203, 106, 251, 1)',
+      },
     },
   },
   plugins: [require('tailwindcss-safe-area')],

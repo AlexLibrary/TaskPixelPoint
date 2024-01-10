@@ -1,29 +1,49 @@
+import Image from 'next/image';
+
+import Advantage from 'components/shared/advantage';
+import Input from 'components/shared/input';
 import getMetadata from 'utils/get-metadata';
 
+import illustration from '../images/illustration.png';
+
 const Home = () => (
-  <section className="py-32 px-safe">
-    <div className="container sm:px-4">
-      <div className="mx-auto max-w-[680px] space-y-5">
-        <h1 className="text-4xl font-bold">Getting Started 🚀</h1>
-        <p className="text-lg">
-          Getting started with this project is as simple as cloning the repository and installing
-          the dependencies:
+  <section className="py-72 px-safe pb-40">
+    <div className="container px-4">
+      <div className="mb-60 relative">
+        <div className="w-48 h-48 bg-primary-1 left-[180px] top-[-200px] absolute rounded-full blur-[12rem] z-0" />
+        <h1 className="w-[696px] text-neutral-50 text-[76px] font-normal font-poppins leading-[85.50px] mb-7 relative z-1">
+          Unlock valuable insights from subscription data
+        </h1>
+        <p className="w-[590px] tracking-[0.4px] mb-10 text-xl leading-normal">
+          Analyze your subscription ecosystem for cost optimization and risk management
         </p>
-        <pre className="overflow-x-auto rounded-md bg-[#000] p-4 text-[#fff]">
-          <code className="text-base">
-            git clone https://github.com/pixel-point/nextjs-tailwind-starter.git
-            <br />
-            cd nextjs-tailwind-starter
-            <br />
-            npm install
-            <br />
-            npm run dev
-          </code>
-        </pre>
-        <p className="text-lg">
-          We hope you find this starter useful, and we are always open to feedback and
-          contributions!
-        </p>
+        <Input />
+        <Image
+          className="absolute right-[-230px] top-[50%] translate-y-[-50%]"
+          width={916}
+          height="100%"
+          src={illustration}
+          alt="Picture of the table"
+          priority
+        />
+      </div>
+      <div className="flex gap-x-40">
+        <Advantage
+          header="3x"
+          subhead="Faster Analysis Cycles"
+          text="Stop the tedium of manual subscription data review. Quickly access essential information
+            from all subscriptions."
+        />
+        <Advantage
+          header="10%+"
+          subhead="Savings on Costs"
+          text="Insights into both subscription data and expenditure lead to rapid, smart cost-cutting strategies."
+        />
+        <Advantage
+          header="30"
+          subhead="Day Setup"
+          text="Implement swiftly with straightforward, no-code processes and ready-to-use integrations."
+        />
       </div>
     </div>
   </section>
