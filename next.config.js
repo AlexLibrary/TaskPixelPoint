@@ -1,4 +1,9 @@
 module.exports = {
+  output: 'export',
+  images: {
+    loader: 'custom',
+    loaderFile: './cloudinaryLoader.ts',
+  },
   poweredByHeader: false,
   trailingSlash: true,
   webpack(config) {

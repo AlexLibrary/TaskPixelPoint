@@ -4,21 +4,20 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-import Error from 'svgs/error.inline.svg';
-import Loading from 'svgs/loading.inline.svg';
-import Success from 'svgs/success.inline.svg';
-
+import Error from '../../../svgs/error.inline.svg';
+import Loading from '../../../svgs/loading.inline.svg';
+import Success from '../../../svgs/success.inline.svg';
 import Button from '../button';
 
 const button = {
   normal:
-    'hover:bg-primary-2 ease-out duration-200 text-base leading-none bg-primary-1 text-black absolute top-[50%] right-[6px] translate-y-[-50%] p-4 px-[50.5px] rounded-full z-[3]',
+    'hover:bg-primary-2 ease-out duration-200 absolute top-[50%] right-[6px] translate-y-[-50%] z-[3]',
   loading:
-    'ease-out duration-200 w-12 h-12 bg-primary-1 text-white absolute top-[50%] right-[6px] translate-y-[-50%] rounded-full z-[3] flex justify-center items-center',
+    'ease-out duration-200 bg-primary-1 absolute top-[50%] right-[6px] translate-y-[-50%] z-[3] flex justify-center items-center',
   success:
-    'ease-out duration-200 w-12 h-12 bg-[#40BFAA] text-white absolute top-[50%] right-[6px] translate-y-[-50%] rounded-full z-[3] flex justify-center items-center',
+    'ease-out duration-200 bg-[#40BFAA] absolute top-[50%] right-[6px] translate-y-[-50%] z-[3] flex justify-center items-center',
   error:
-    'ease-out duration-200 w-12 h-12 bg-primary-2 text-white absolute top-[50%] right-[6px] translate-y-[-50%] rounded-full z-[3] flex justify-center items-center',
+    'ease-out duration-200 bg-primary-2 absolute top-[50%] right-[6px] translate-y-[-50%] z-[3] flex justify-center items-center',
 };
 
 const regex = /^[\w\-.]+@([\w-]+\.)+[\w-]{2,}$/gm;
@@ -70,6 +69,8 @@ const Input = ({ type = 'email', placeholder = 'Your business email...', ...othe
         />
       </label>
       <Button
+        theme="primary"
+        size={state === 'normal' ? 'md' : 'icon'}
         className={clsx(
           state === 'normal' && button.normal,
           state === 'loading' && button.loading,

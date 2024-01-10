@@ -21,6 +21,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "cloudinary": "^1.41.2",
     "clsx": "^2.0.0",
     "file-loader": "^6.2.0",
     "framer-motion": "^10.16.15",

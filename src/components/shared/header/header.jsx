@@ -9,14 +9,24 @@ const Header = () => (
       aria-label="Global"
     >
       <div className="flex gap-x-10">
-        <Button className="text-base font-normal">Integrations</Button>
-        <Button className="text-base font-normal">Core Platform</Button>
-        <Button className="text-base font-normal">Company</Button>
-        <Button className="text-base font-normal">Resources</Button>
+        <Button theme="link" size="link">
+          Integrations
+        </Button>
+        <Button theme="link" size="link">
+          Core Platform
+        </Button>
+        <Button theme="link" size="link">
+          Company
+        </Button>
+        <Button theme="link" size="link">
+          Resources
+        </Button>
       </div>
       <div className="flex gap-x-8">
-        <Button className="text-base font-medium">Contact Sales</Button>
-        <Button className="bg-white text-base font-semibold px-[18px] py-[10px] rounded-full text-black">
+        <Button theme="link" size="link" className="font-medium">
+          Contact Sales
+        </Button>
+        <Button size="sm" theme="white" className="text-base font-semibold ">
           Book a Demo
         </Button>
       </div>

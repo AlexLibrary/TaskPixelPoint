@@ -2,9 +2,6 @@ import Image from 'next/image';
 
 import Advantage from 'components/shared/advantage';
 import Input from 'components/shared/input';
-import getMetadata from 'utils/get-metadata';
-
-import illustration from '../images/illustration.png';
 
 const Home = () => (
   <section className="py-72 px-safe pb-40">
@@ -21,8 +18,8 @@ const Home = () => (
         <Image
           className="absolute right-[-230px] top-[50%] translate-y-[-50%]"
           width={916}
-          height="100%"
-          src={illustration}
+          height={1021}
+          src="/illustration.png"
           alt="Picture of the table"
           priority
         />
@@ -50,12 +47,3 @@ const Home = () => (
 );
 
 export default Home;
-
-export async function generateMetadata() {
-  // FIXME: Add real data here
-  return getMetadata({
-    title: 'Home - Next.js Tailwind Starter',
-    description: 'Next.js Tailwind Starter',
-    pathname: '/',
-  });
-}
