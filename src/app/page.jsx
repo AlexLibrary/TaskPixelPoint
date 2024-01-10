@@ -19,7 +19,7 @@ const Home = () => (
           className="absolute right-[-230px] top-[50%] translate-y-[-50%]"
           width={916}
           height={1021}
-          src="/illustration.png"
+          src="https://res.cloudinary.com/dgwqsbypz/image/upload/v1704912906/illustration.png"
           alt="Picture of the table"
           priority
         />

@@ -11,7 +11,7 @@ import Button from '../button';
 
 const button = {
   normal:
-    'hover:bg-primary-2 ease-out duration-200 absolute top-[50%] right-[6px] translate-y-[-50%] z-[3]',
+    'hover:bg-primary-2 bg-primary-1 ease-out duration-200 absolute top-[50%] right-[6px] translate-y-[-50%] z-[3]',
   loading:
     'ease-out duration-200 bg-primary-1 absolute top-[50%] right-[6px] translate-y-[-50%] z-[3] flex justify-center items-center',
   success:

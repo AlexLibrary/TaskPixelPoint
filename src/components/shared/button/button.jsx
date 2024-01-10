@@ -16,7 +16,7 @@ const styles = {
   theme: {
     link: '',
     white: 'bg-white text-black',
-    primary: 'bg-primary-1 text-black',
+    primary: 'text-black',
   },
 };
 
